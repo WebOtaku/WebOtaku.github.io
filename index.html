@@ -1,0 +1,112 @@
+<?php include("captcha.php"); ?>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="head col-md-12">  <!-- Заголово -->
+          <h1>Регистрация</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="content col-sm-12 col-md-8 push-md-2 col-lg-8 push-lg-2">  <!-- Форма -->  
+          <form id="callback" method="POST">
+            <div class="col-md-12 col-xl-6">
+                <!-- Фамилия -->
+              <label for="input-1">Фамилия<br/>
+                <input type="text" name="last-name" placeholder="Введите..." id="input-1" required/>
+              </label>
+              <hr/>
+                <!-- Имя -->
+              <label for="input-2">Имя<br/>  
+                <input type="text" name="name" placeholder="Введите..." id="input-2" required/>
+              </label>
+              <hr/>
+                <!-- Отчество -->
+              <label for="input-3">Отчество<br/>
+                <input type="text" name="middle-name" placeholder="Введите..." id="input-3" required/>
+              </label>
+              <hr/>
+                <!-- Серия и номер паспорта -->
+              <label for="input-4">Серия и номер паспорта<br/>
+                <input type="text" name="passport" placeholder="Введите..." id="input-4" required/>
+
+              </label>
+              <hr/>
+                <!-- Дата рождения -->
+              <label for="input-5">Дата рождения<br/>
+                <input type="date" name="date" placeholder="Введите..." id="input-5" required/>
+              </label>
+              <hr/>
+                <!-- Номер мобильного телефона -->
+              <label for="input-6">Номер мобильного телефона<br/>
+                <input type="tel" name="phone" placeholder="+7(999)999-99-99" id="input-6" required/>
+              </label>
+              <hr/>
+                <!-- Почта -->
+              <label for="input-7">Электронная почта<br/>  
+                <input type="email" name="mail" placeholder="example@mail.ru" id="input-7" required/>
+              </label>
+              <hr/>
+                <!-- Страна -->
+              <label for="input-8">Страна проживания(по прописке)<br/>  
+                <input type="text" name="country" placeholder="Введите..." id="input-8" required/>
+              </label>
+              <hr/>
+            </div>
+            <div class="col-md-12 col-xl-6">
+                <!-- Индекс -->
+              <label for="input-9">Индекс(по прописке)<br/>  
+                <input type="text" name="index" placeholder="Введите..." id="input-9" required/>
+              </label>
+              <hr/>
+                <!-- Населённый пункт -->
+              <label for="input-10">Населённый пункт(по прописке)<br/>  
+                <input type="text" name="city" placeholder="Введите..." id="input-10" required/>
+              </label>
+              <hr/>
+                <!-- Улица, номер дома, квартира -->
+              <label for="input-11">Улица, номер дома, квартира<br/> 
+                <input type="text" name="address" placeholder="Введите..." id="input-11" required/>
+              </label>
+              <hr/>
+                <!-- Логин Скайпа -->
+              <label for="input-12">Логин скайпа. Если нет скайпа, <a href="https://www.skype.com/ru/">установите</a>.<br/> 
+                <input type="text" name="skype" placeholder="Введите..." id="input-12" required/>
+              </label>
+              <hr/>
+                <!-- Ссылка на страницу в соц-сетях -->
+              <label for="input-13">Ссылка на вашу страницу в соц-сетях<br/>
+                <input type="url" name="social" placeholder="vk.com/id9999999" id="input-13">
+              </label>
+              <hr/>
+                <!-- Каптча -->
+              <div class="g-recaptcha" data-sitekey="6LdG0g0UAAAAAHeSqEHsOY3su8Q9JXjha8F40BvR"></div>
+                <!-- Кнопка отправки --> 
+              <button class="button" type="submit">Отправить</button>
+            </div>
+          </form>
+        </dv>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </body>
+</html>
