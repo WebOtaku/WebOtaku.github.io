@@ -1,4 +1,9 @@
-<?php include("captcha.php"); ?>
+<?php 
+
+include("captcha.php");
+include("mail.php"); 
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -58,7 +63,7 @@
               <hr/>
                 <!-- Почта -->
               <label for="input-7">Электронная почта<br/>  
-                <input type="email" name="mail" placeholder="example@mail.ru" id="input-7" maxlength="45" required/>
+                <input type="email" name="mail" placeholder="example@mail.ru" id="input" maxlength="45" required/>
               </label>
               <hr/>
                 <!-- Страна -->
