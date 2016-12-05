@@ -8,6 +8,6 @@ if (isset($_POST['submit'])) {
     $result = json_decode($url, TRUE);
     /*if ($result['success'] == 1) {
         echo $_POST['myreq'];
-    } */
+    }*/
 }
 ?>

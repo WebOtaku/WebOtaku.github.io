@@ -34,14 +34,16 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-       #callback input{
+       #callback input,
+       #callback select{
             width:250px;
     } 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-        #callback input{
+        #callback input,
+        #callback select{
             width:275px;
     }
         

@@ -61,13 +61,14 @@ table {
     padding:10px;
     margin-top:1px;
     border:2px solid rgba(0,0,0,1);
-    border-radius:5px; 
+    border-radius:5px 5px 20px 20px; 
 }
 #callback label{
     width:auto;
     color:rgba(0, 125, 220, 1);
 }
-#callback input{
+#callback input,
+#callback select{
     height:34px; 
     padding:4px 12px;
     color:#000; 
