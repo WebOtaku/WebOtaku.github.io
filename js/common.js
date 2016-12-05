@@ -8,11 +8,11 @@ $(function(){
   /* Индекс */
   $("#input-9").mask("999999", {placeholder:" "});
 
-  $("#callback").submit(function() {
+  /*$("#callback").submit(function() {
 		$.ajax({
-			type: "GET",
-			url: "mail.php",
-			data: $("#callback").serialize()
+			type:"GET",
+			url:"mail.php",
+			data:$("#callback").serialize()
 		}).done(function() {
 			alert("Спасибо за заявку!");
 			setTimeout(function() {
@@ -20,6 +20,6 @@ $(function(){
 			}, 1000);
 		});
 		return false;
-	});
+	});*/
 });
 
