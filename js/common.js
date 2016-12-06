@@ -7,19 +7,17 @@ $(function(){
 
   /* Индекс */
   $("#input-9").mask("999999", {placeholder:" "});
-
-  /*$("#callback").submit(function() {
-		$.ajax({
-			type:"GET",
-			url:"mail.php",
-			data:$("#callback").serialize()
-		}).done(function() {
-			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
-		});
-		return false;
-	});*/
 });
-
+/*$("#callback").submit(function() {
+	$.ajax({
+		type:"POST",
+		url:"mail.php",
+		data:$("#callback").serialize()
+	}).done(function() {
+		alert("Спасибо за заявку!");
+		setTimeout(function() {
+			$.fancybox.close();
+		}, 1000);
+	});
+	return false;
+});*/

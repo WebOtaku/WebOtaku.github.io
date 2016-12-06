@@ -1,9 +1,3 @@
-<?php 
-
-require('captcha.php');
-require('mail.php');
-
-?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -28,7 +22,7 @@ require('mail.php');
       </div>
       <div class="row">
         <div class="content col-sm-12 col-md-8 push-md-2 col-lg-8 push-lg-2">  <!-- Форма -->  
-          <form id="callback" method="POST">
+          <form action="captcha.php" method="POST" id="callback">
             <div class="col-md-12 col-xl-6">
                 <!-- Фамилия -->
               <label for="input-1">Фамилия<br/>
@@ -72,12 +66,17 @@ require('mail.php');
                 <datalist id="country-list">
                   <option value="Россия">Россия</option>      
                   <option value="Украина">Украина</option>    
-                  <option value="Белорусь">Белорусь</option>    
+                  <option value="Белоруссия">Белоруссия</option>    
                 </datalist>
               </label>
               <hr/>
             </div>
             <div class="col-md-12 col-xl-6">
+                <!-- Скрытые поля -->
+		          <input type="hidden" name="project_name" value="formrg"> <!-- Название сайта -->
+		          <input type="hidden" name="admin_email" value="testmailphp23@gmail.com"> <!-- Почта администратора -->
+		          <input type="hidden" name="form_subject" value="С сайта formrg"> <!-- С какого ресурса отправка -->
+
                 <!-- Индекс -->
               <label for="input-9">Индекс(по прописке)<br/>  
                 <input type="text" name="index" placeholder="Введите..." id="input-9"  maxlength="6" required/>
@@ -106,7 +105,7 @@ require('mail.php');
                 <!-- Каптча -->
               <div class="g-recaptcha" data-sitekey="6LdG0g0UAAAAAHeSqEHsOY3su8Q9JXjha8F40BvR"></div>
                 <!-- Кнопка отправки --> 
-              <button class="button" type="submit">Отправить</button>
+              <button name="submit" class="button" type="submit">Отправить</button>
             </div>
           </form>
         </dv>

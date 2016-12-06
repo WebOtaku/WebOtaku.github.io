@@ -1,13 +1,35 @@
 <?php 
-if (isset($_POST['submit'])) {
+ if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (empty($_POST['g-recaptcha-response'])) {
+        exit('Empty');
+    }
+
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+
+    $recaptcha = $_POST['g-recaptcha-response'];
     $secret = '6LdG0g0UAAAAACS_bVQf9QcA4o3XIQ5K2NzXX1uV';
-    $response = $_POST['g-recaptcha-response'];
-    $remoteip = $_SERVER['REMOTE_ADDR'];
-    
-    $url = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip");
-    $result = json_decode($url, TRUE);
-    /*if ($result['success'] == 1) {
-        echo $_POST['myreq'];
-    }*/
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+    $url_data = $url.'?secret='.$secret.'&response='.$recaptcha.'&remoteip='. $ip;
+
+    $curl = curl_init();
+
+    curl_setopt($curl, CURLOPT_URL, $url_data);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    $res = curl_exec($curl);
+    curl_close($curl);
+
+    $res = json_decode($res);
+
+    if($res->success) {
+        require('mail.php');
+    }
+    else {
+        exit('Error');
+    }
 }
 ?>
+
