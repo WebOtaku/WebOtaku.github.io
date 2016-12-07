@@ -16,7 +16,8 @@ if ( $method === 'POST' ) {
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 			<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
 			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-		</tr>";
+		</tr>
+		";
 	}
 }
 } else if ( $method === 'GET' ) {
@@ -31,7 +32,8 @@ if ( $method === 'POST' ) {
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 			<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
 			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-		</tr>";
+		</tr>
+		";
 	}
 }
 }
@@ -48,4 +50,5 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
 mail($admin_email, adopt($form_subject), $message, $headers );
+
 ?>

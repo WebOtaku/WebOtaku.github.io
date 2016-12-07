@@ -24,6 +24,11 @@
         <div class="content col-sm-12 col-md-8 push-md-2 col-lg-8 push-lg-2">  <!-- Форма -->  
           <form action="captcha.php" method="POST" id="callback">
             <div class="col-md-12 col-xl-6">
+                <!-- Скрытые поля -->
+		            <input type="hidden" name="project_name" value="formrg"/>
+		  	        <input type="hidden" name="admin_email" value="testmailphp23@gmail.com"/>
+		            <input type="hidden" name="form_subject" value="С сайта formrg"/>
+
                 <!-- Фамилия -->
               <label for="input-1">Фамилия<br/>
                 <input type="text" name="last-name" placeholder="Введите..." id="input-1" maxlength="25" required/>
@@ -64,19 +69,14 @@
               <label for="input-8">Страна проживания(по прописке)<br/>  
                 <input type="text" name="country" id="input-8" placeholder="Выберите страну проживания" list="country-list" required/>
                 <datalist id="country-list">
-                  <option value="Россия">Россия</option>      
-                  <option value="Украина">Украина</option>    
-                  <option value="Белоруссия">Белоруссия</option>    
+                  <option value="RU">Россия</option>      
+                  <option value="UK">Украина</option>    
+                  <option value="BY">Белоруссия</option>    
                 </datalist>
               </label>
               <hr/>
             </div>
             <div class="col-md-12 col-xl-6">
-                <!-- Скрытые поля -->
-		          <input type="hidden" name="project_name" value="formrg"> <!-- Название сайта -->
-		          <input type="hidden" name="admin_email" value="testmailphp23@gmail.com"> <!-- Почта администратора -->
-		          <input type="hidden" name="form_subject" value="С сайта formrg"> <!-- С какого ресурса отправка -->
-
                 <!-- Индекс -->
               <label for="input-9">Индекс(по прописке)<br/>  
                 <input type="text" name="index" placeholder="Введите..." id="input-9"  maxlength="6" required/>
@@ -103,12 +103,12 @@
               </label>
               <hr/>
                 <!-- Каптча -->
-              <div class="g-recaptcha" data-sitekey="6LdG0g0UAAAAAHeSqEHsOY3su8Q9JXjha8F40BvR"></div>
+              <div class="g-recaptcha" itemtype="hidden" data-sitekey="6LdG0g0UAAAAAHeSqEHsOY3su8Q9JXjha8F40BvR"></div>
                 <!-- Кнопка отправки --> 
               <button name="submit" class="button" type="submit">Отправить</button>
             </div>
           </form>
-        </dv>
+        </div>
       </div>
     </div>
 
