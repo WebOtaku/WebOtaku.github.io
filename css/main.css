@@ -82,4 +82,6 @@ table {
 }
 #callback button{
     margin-top:10px;
+    width:250px;
+    height:50px;
 }
