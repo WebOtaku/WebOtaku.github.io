@@ -18,6 +18,13 @@
         .content{
             border:none;
     }    
+        .row{
+        padding-top:0;
+    }
+        .head{
+            border:none;
+            border-radius:0;
+    }
 }
 
 /* Extra Small Devices, Phones */
