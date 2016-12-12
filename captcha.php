@@ -21,6 +21,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
    else {
        exit('Error');
    }
-   header('Location: http://localhost/formrg/');
+   header('Location: http://formrg.azurewebsites.net/');
 }
 ?>
