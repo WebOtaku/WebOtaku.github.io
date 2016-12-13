@@ -1,7 +1,7 @@
 <?php 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
    if (empty($_POST['g-recaptcha-response'])) {
-       exit('Empty');
+       exit('Капча не пройдена');
    }
    $url = 'https://www.google.com/recaptcha/api/siteverify';
    $recaptcha = $_POST['g-recaptcha-response'];
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
        require('mail.php');
    }
    else {
-       exit('Error');
+       exit('Повторная отправка невозможна');
    }
 }
 ?>

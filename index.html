@@ -57,7 +57,7 @@
               <hr/>
                 <!-- Номер мобильного телефона -->
               <label for="input-6">Номер мобильного телефона<br/>
-                <input type="tel" name="phone" placeholder="+7(999) 999-99-99" id="input-6" maxlength="16" required/>
+                <input type="tel" name="phone" placeholder="(999) 999-99-99" id="input-6" maxlength="14" required/>
               </label>
               <hr/>
                 <!-- Почта -->
@@ -67,12 +67,12 @@
               <hr/>
                 <!-- Страна -->
               <label for="input-8">Страна проживания(по прописке)<br/>  
-                <input type="text" name="country" id="input-8" placeholder="Выберите страну проживания" list="country-list" required/>
-                <datalist id="country-list">
-                  <option value="RU">Россия</option>      
+                <select name="country" id="input-8" required>
+                  <option disabled>Выберите страну проживания</option>
+                  <option selected value="RU">Россия</option>      
                   <option value="UK">Украина</option>    
                   <option value="BY">Белоруссия</option>    
-                </datalist>
+                </select>
               </label>
               <hr/>
             </div>

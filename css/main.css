@@ -75,7 +75,6 @@ table {
     border:1px solid #ccc;
     border-radius:5px;
     outline:none;
-    transition:opacity 2s;
 }
 #callback input:focus{
     border-color:transparent;
