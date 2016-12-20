@@ -1,11 +1,11 @@
 $(function(){
-  $.mask.definitions['а']='[А-Яа-я]';
+  $.mask.definitions['b']='[А-Яа-я]';
   /* Фамилия */
-  $("#input-1").mask("ааа?ааааааааааааа", {placeholder:" "});
+  $("#input-1").mask("bbb?bbbbbbbbbbbbb", {placeholder:" "});
   /* Имя */
-  $("#input-2").mask("ааа?ааааааааааааа", {placeholder:" "});
+  $("#input-2").mask("bbb?bbbbbbbbbbbbb", {placeholder:" "});
   /* Отчество */
-  $("#input-3").mask("ааа?ааааааааааааа", {placeholder:" "}); 
+  $("#input-3").mask("bbb?bbbbbbbbbbbbb", {placeholder:" "}); 
   /* Серия и номер паспорта */
   $("#input-4").mask("99-99 999999", {placeholder:" "});
   /* Телефон */
@@ -13,5 +13,5 @@ $(function(){
   /* Индекс */
   $("#input-8").mask("999999", {placeholder:" "});
   /* Населённый пункт */
-  $("#input-9").mask("ааа?ааааааааааааааа", {placeholder:" "});
+  $("#input-9").mask("bbb?bbbbbbbbbbbbbbb", {placeholder:" "});
 }); 
